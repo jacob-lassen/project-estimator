@@ -10,8 +10,8 @@ function generateReport(tasks, reportName) {
 };
 
 function generateEstimate(task) {
-    const stddev = (task.nominal-task.best) / 6;
-    const mean = (task.best+task.nominal+(4*task.nominal)) / 6
+    const stddev = (task.worst-task.best) / 6;
+    const mean = (task.best+task.worst+(4*task.nominal)) / 6
     return {
         name: task.name,
         best: task.best,
